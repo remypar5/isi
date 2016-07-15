@@ -1,2 +1,4 @@
 /node_modules/
 README.html
+/dist/bundle.js
+npm-debug.log
