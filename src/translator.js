@@ -8,12 +8,12 @@ const startingHoursMap = _.zipObject('ABCDEFGHIJKLMNOPQRSTUVW'.split(''), _.rang
 const startingQuartersMap = _.zipObject('abc'.split(''), _.range(1, 4));
 
 /**
- * Translate a ``shift`` to an immutable ``Map`` containing a start, end, and duration
+ * Translate a <code>shift</code> to an immutable <code>Map</code> containing a start, end, and duration
  *
- * Usage: <code>const shift = translate('A8')</code>
+ * Usage: <code>const shift = translate('Hbs0');</code>
  *
- * @param  {string} The input string to translate
- * @return {object} The translation of ``input``
+ * @param  {string}
+ * @return {object}
  */
 export default function translate(shift) {
 	const parsed = shift.match(shiftParserRegex);
