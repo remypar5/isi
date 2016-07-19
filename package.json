@@ -5,8 +5,8 @@
   "main": "src/index.jsx",
   "scripts": {
     "start": "babel-node src/index.jsx",
-    "test": "mocha --compilers js:babel-core/register --recursive",
-    "test:watch": "npm run test -- --watch"
+    "test": "mocha --compilers js:babel-core/register --require ./test/test_helper.js 'test/**/*.@(js|jsx)'",
+    "test:watch": "npm run test -- --watch --watch-extensions jsx"
   },
   "babel": {
     "presets": [
@@ -24,7 +24,10 @@
     "babel-preset-es2015": "^6.9.0",
     "babel-preset-react": "^6.11.1",
     "chai": "^3.5.0",
+    "chai-dom": "^1.4.0",
+    "jsdom": "^9.4.1",
     "mocha": "^2.5.3",
+    "react-addons-test-utils": "^15.2.1",
     "react-hot-loader": "^1.3.0",
     "webpack": "^1.13.1",
     "webpack-dev-server": "^1.14.1"
